@@ -309,6 +309,11 @@
       Major Facilities
     </button>
   </li>
+  <li>
+    <button class="responsive-tab-button" data-tab="aicte-approval">
+      AICTE Approval Letter
+    </button>
+  </li>
 </ul>
 
     <div id="overview-content" class="tab-content" style="display: none; margin-top: 20px;">
@@ -457,6 +462,20 @@
       		</div>
 	      </div>
 	</div>
+
+   <div id="aicte-approval" class="tab-content" style="display: none; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; font-family: Georgia, serif;">
+
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+        <li><a href="pdfs/EOA_Report___________11_2_2025_16_3513.pdf" target="_blank">UEMK AICTE Approval[2024-2025]</a></li>
+        <li><a href="pdfs/--EOA-Corrigendum 2023-24_Corrigendum 2023-24.pdf" target="_blank">UEMK AICTE Approval[2023-2024]</a></li>
+        <li><a href="pdfs/UEMK_AICTE Approval 2022-23.pdf" target="_blank">UEMK AICTE Approval[2022-2023]</a></li>
+        <li><a href="pdfs/AICTE Approval 2021-22.pdf"target="_blank"> UEMK AICTE Approval[2021-2022]</a></li>
+        <li><a href="pdfs/UEMK_EOA_Report_2020-21.pdf"target="_blank"> UEMK AICTE Approval[2020-2021]</a></li>
+        <li><a href="pdfs/UEMK_AICTE Approval 2019-20.pdf"target="_blank"> UEMK AICTE Approval[2019-2020]</a></li>
+      </div>
+    
+   </div> 
+
   </div>
 </section>
 
@@ -906,7 +925,8 @@
     const tabContents = {
       overview: document.getElementById("overview-content"),
       achievements: document.getElementById("achievements"),
-      "major-facilities-ab": document.getElementById("majorfacilities")
+      "major-facilities-ab": document.getElementById("majorfacilities"),
+      "aicte-approval": document.getElementById("aicte-approval")
     };
 
     tabButtons.forEach(button => {
