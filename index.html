@@ -423,7 +423,26 @@
     <div style="flex: 0 0 48%; overflow: hidden; border-radius: 8px;">
       <img src="images/achiv4.jpg" alt="Event 4" class="zoom-img">
     </div>
-    
+    <h3 style="text-align: center; font-family: Georgia, serif; font-weight: bold; margin-bottom: 20px;">
+  Some Success Stories from Our Alumni-
+</h3>
+
+<!-- Flex Container for Arrows and Video -->
+<div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+
+  <!-- Left Arrow -->
+  <button onclick="showPrevVideo()" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#8592;</button>
+
+  <!-- Video Container -->
+  <video id="successVideo" width="640" height="360" controls style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    <source id="videoSource" src="videos/success1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Right Arrow -->
+  <button onclick="showNextVideo()" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#8594;</button>
+
+</div>
    </div>
   </div>
 
@@ -1002,7 +1021,33 @@
     // Scroll to about section
     document.getElementById("about").scrollIntoView({ behavior: "smooth" });
   });
+    const videoList = [
+    'videos/success1.mp4',
+    'videos/success2.mp4',
+    'videos/success3.mp4',
+    'videos/success4.mp4',
+    'videos/success5.mp4'
+  ];
+  
+  let currentVideoIndex = 0;
 
+  function showNextVideo() {
+    currentVideoIndex = (currentVideoIndex + 1) % videoList.length;
+    updateVideo();
+  }
+
+  function showPrevVideo() {
+    currentVideoIndex = (currentVideoIndex - 1 + videoList.length) % videoList.length;
+    updateVideo();
+  }
+
+  function updateVideo() {
+    const video = document.getElementById('successVideo');
+    const source = document.getElementById('videoSource');
+    source.src = videoList[currentVideoIndex];
+    video.load();
+    video.play();
+  }
   
 </script>
 
